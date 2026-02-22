@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzy Bloom | Handcrafted Boutique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="#" class="logo" data-sound="hover">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Fuzzy Bloom</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link" data-sound="hover">Home</a></li>
+                <li><a href="#gallery" class="nav-link" data-sound="hover">Collection</a></li>
+                <li><a href="#about" class="nav-link" data-sound="hover">Story</a></li>
+                <li><a href="#contact" class="nav-link" data-sound="hover">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" data-sound="click" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" data-sound="click" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-visual">
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=1200&auto=format&fit=crop&q=80" alt="Hero" class="hero-image">
+                <div class="hero-image-overlay"></div>
+            </div>
+            <div class="hero-accent-shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-line"></span>
+                <span class="badge-text">Est. 2023 — Portland, OR</span>
+            </div>
+            <h1 class="reveal stagger-1">
+                <span class="line">Wild</span>
+                <span class="line accent">Botanicals</span>
+                <span class="line">& Crafts</span>
+            </h1>
+            <p class="reveal stagger-2">Small-batch studio creating bold floral arrangements and artisan objects for modern spaces.</p>
+            <div class="hero-cta reveal stagger-3">
+                <a href="#gallery" class="btn btn-primary" data-sound="click">
+                    Explore Collection
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-text" data-sound="hover">Our Story</a>
+            </div>
+        </div>
+        <div class="scroll-hint" data-sound="hover">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Marquee Strip -->
+    <div class="marquee-strip">
+        <div class="marquee-content">
+            <span>Handcrafted</span>
+            <span class="marquee-dot">◆</span>
+            <span>Sustainable</span>
+            <span class="marquee-dot">◆</span>
+            <span>Local</span>
+            <span class="marquee-dot">◆</span>
+            <span>Wild</span>
+            <span class="marquee-dot">◆</span>
+            <span>Handcrafted</span>
+            <span class="marquee-dot">◆</span>
+            <span>Sustainable</span>
+            <span class="marquee-dot">◆</span>
+            <span>Local</span>
+            <span class="marquee-dot">◆</span>
+            <span>Wild</span>
+            <span class="marquee-dot">◆</span>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header container">
+            <div class="header-left reveal">
+                <span class="section-tag">Selected Works</span>
+                <h2>The<br>Collection</h2>
+            </div>
+            <div class="header-right reveal">
+                <p>Each piece is one-of-a-kind, crafted with locally foraged botanicals and sustainable materials.</p>
+            </div>
+        </div>
+
+        <div class="filter-bar reveal">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <span class="filter-label">Filter by:</span>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" data-sound="filter">All Works</button>
+                        <button class="filter-btn" data-filter="floral" data-sound="filter">Florals</button>
+                        <button class="filter-btn" data-filter="crafts" data-sound="filter">Objects</button>
+                        <button class="filter-btn" data-filter="custom" data-sound="filter">Commissions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-masonry" id="galleryGrid">
+            <div class="gallery-item size-large reveal" data-category="floral" data-sound="hover">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=800&auto=format&fit=crop&q=80" alt="Dried Arrangement">
+                    <div class="gallery-overlay">
+                        <div class="overlay-top">
+                            <span class="category-tag">Floral</span>
+                            <span class="price">$180</span>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3>Desert Dried Arrangement</h3>
+                            <p>Pampas, palms & preserved botanicals</p>
+                            <button class="btn-whatsapp" onclick="orderWhatsApp('Desert Dried Arrangement')" data-sound="success">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item size-tall reveal" data-category="crafts" data-sound="hover">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=600&auto=format&fit=crop&q=80" alt="Macramé">
+                    <div class="gallery-overlay">
+                        <div class="overlay-top">
+                            <span class="category-tag">Object</span>
+                            <span class="price">$95</span>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3>Macramé Wall Piece</h3>
+                            <p>Natural cotton, driftwood base</p>
+                            <button class="btn-whatsapp" onclick="orderWhatsApp('Macramé Wall Piece')" data-sound="success">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item size-wide reveal" data-category="custom" data-sound="hover">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=1000&auto=format&fit=crop&q=80" alt="Gift Box">
+                    <div class="gallery-overlay">
+                        <div class="overlay-top">
+                            <span class="category-tag">Commission</span>
+                            <span class="price">From $250</span>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3>Curated Gift Boxes</h3>
+                            <p>Custom botanical + object pairings</p>
+                            <button class="btn-whatsapp" onclick="orderWhatsApp('Curated Gift Boxes')" data-sound="success">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="floral" data-sound="hover">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=600&auto=format&fit=crop&q=80" alt="Wildflower">
+                    <div class="gallery-overlay">
+                        <div class="overlay-top">
+                            <span class="category-tag">Floral</span>
+                            <span class="price">$75</span>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3>Wildflower Bunch</h3>
+                            <p>Seasonal local blooms</p>
+                            <button class="btn-whatsapp" onclick="orderWhatsApp('Wildflower Bunch')" data-sound="success">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal" data-category="crafts" data-sound="hover">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1606293926075-69a00febf780?w=600&auto=format&fit=crop&q=80" alt="Ceramic">
+                    <div class="gallery-overlay">
+                        <div class="overlay-top">
+                            <span class="category-tag">Object</span>
+                            <span class="price">$120</span>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3>Stoneware Vessel</h3>
+                            <p>Hand-thrown, reactive glaze</p>
+                            <button class="btn-whatsapp" onclick="orderWhatsApp('Stoneware Vessel')" data-sound="success">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item size-large reveal" data-category="custom" data-sound="hover">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=800&auto=format&fit=crop&q=80" alt="Bridal">
+                    <div class="gallery-overlay">
+                        <div class="overlay-top">
+                            <span class="category-tag">Commission</span>
+                            <span class="price">From $400</span>
+                        </div>
+                        <div class="overlay-bottom">
+                            <h3>Bridal Installation</h3>
+                            <p>Custom wedding & event florals</p>
+                            <button class="btn-whatsapp" onclick="orderWhatsApp('Bridal Installation')" data-sound="success">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-bg-text">STORY</div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images reveal-left">
+                    <div class="image-stack">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&auto=format&fit=crop&q=80" alt="Studio" class="stack-main">
+                        <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=400&auto=format&fit=crop&q=80" alt="Detail" class="stack-sub">
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-tag">Our Philosophy</span>
+                    <h2>Made Slow,<br>Made With Intention</h2>
+                    <div class="about-text">
+                        <p>We reject mass production. Every arrangement is composed by hand, every object selected for its texture and soul.</p>
+                        <p>Our studio operates on a small-batch model—we create when inspired, not on demand. This means when you acquire a Fuzzy Bloom piece, you're receiving something truly singular.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat" data-sound="hover">
+                            <span class="stat-number" data-count="47">0</span>
+                            <span class="stat-label">Species Foraged</span>
+                        </div>
+                        <div class="stat" data-sound="hover">
+                            <span class="stat-number" data-count="12">0</span>
+                            <span class="stat-label">Local Makers</span>
+                        </div>
+                        <div class="stat" data-sound="hover">
+                            <span class="stat-number" data-count="0">0</span>
+                            <span class="stat-label">Plastic Used</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-header reveal">
+                <span class="section-tag">Start a Project</span>
+                <h2>Let's Create<br>Something Wild</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card reveal" data-sound="hover">
+                    <div class="card-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Quick Chat</h3>
+                    <p>Questions about a piece or custom order? Reach us directly.</p>
+                    <a href="https://wa.me/1234567890" class="btn btn-outline" target="_blank" data-sound="click">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+                
+                <div class="contact-card reveal stagger-1" data-sound="hover">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Studio Inquiry</h3>
+                    <p>Commission requests, collaborations, or press inquiries.</p>
+                    <a href="mailto:hello@fuzzybloom.com" class="btn btn-outline" data-sound="click">
+                        <i class="fas fa-paper-plane"></i> Email Us
+                    </a>
+                </div>
+                
+                <div class="contact-card reveal stagger-2" data-sound="hover">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit</h3>
+                    <p>Open by appointment only. Come smell the flowers.</p>
+                    <span class="btn btn-outline disabled" data-sound="hover">
+                        <i class="fas fa-clock"></i> Book Visit
+                    </span>
+                </div>
+            </div>
+
+            <div class="newsletter reveal">
+                <div class="newsletter-content">
+                    <h3>Join the Inner Circle</h3>
+                    <p>New drops, studio notes, and foraging reports—monthly, never spam.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="your@email.com" required data-sound="focus">
+                    <button type="submit" class="btn btn-primary" data-sound="success">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo">
+                        <span class="logo-icon">✦</span>
+                        <span class="logo-text">Fuzzy Bloom</span>
+                    </span>
+                    <p>Pipe cleaner craftwoman<br>Al Satwa, Dubai, UAE</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/lordhighleeam.ampo.1" 
+                class="footer-link" 
+                data-sound="hover" 
+                target="_blank">
+                Facebook
+                </a>
+
+                <a href="https://www.instagram.com/ms.elden/" 
+                class="footer-link" 
+                data-sound="hover" 
+                target="_blank">
+                Instagram
+                </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Fuzzy Bloom. Crafted with intention By Elden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action -->
+    <a href="https://wa.me/971545584534?text=Hi%20Fuzzy%20Bloom!" class="fab-action" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" data-sound="hover">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" data-sound="click">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Control -->
+    <button class="audio-control" id="audioControl" aria-label="Toggle sound">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
